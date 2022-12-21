@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Lalezar;
+  src: url("../fonts/Lalezar-Regular.otf") ;
+  src: url("../fonts/Lalezar-Regular.ttf") ;
+}
+
+html {
+  background: var(--official);
+  height: 100vh;
+  font-size: 62.5%; //10px
+}
+
+body {
+  margin: 0;
+  font-family: Lalezar;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: -webkit-fill-available;
+  height: fill-available;
+  height: -moz-available;
+}
+
+
+
+
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
