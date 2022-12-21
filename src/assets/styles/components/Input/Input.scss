@@ -1,0 +1,23 @@
+.input {
+  outline: none;
+  border: 0.1rem solid;
+  height: 5.6rem;
+  background: inherit;
+  color: var(--dark);
+  font-size: 1.6rem;
+  padding: 0rem 1rem;
+  border-radius: 2rem;
+  line-height: 5.6rem;
+
+  &:focus {
+    border: 0.1rem solid var(--dark);
+  }
+  
+  &--normal {
+    width: 27rem;
+  }
+
+  &--large {
+    width: 56rem;
+  }
+}
