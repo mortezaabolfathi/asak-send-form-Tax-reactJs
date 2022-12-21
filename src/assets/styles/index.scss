@@ -1,4 +1,8 @@
+// basic styles
 @import "./var.scss";
 @import "./reset.scss";
 @import "./public.scss";
 @import "./App.scss";
+
+// style components
+@import "./components/Button/Button.scss";
