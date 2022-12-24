@@ -18,6 +18,7 @@ body {
   height: -webkit-fill-available;
   height: fill-available;
   height: -moz-available;
+  direction: rtl;
 }
 
 
@@ -25,7 +26,7 @@ body {
 
 #root {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
