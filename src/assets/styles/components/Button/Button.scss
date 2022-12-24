@@ -1,0 +1,67 @@
+.btn {
+  border: none;
+  outline: none;
+  filter: brightness(1);
+  padding: 1rem;
+  font-size: 2.2rem;
+  height: 5.6rem;
+  border-radius: 2rem;
+  font-family: 'Lalezar', cursive;
+  box-shadow: 0px 3px 4px 1px #80808094;
+
+  &:hover:enabled {
+    cursor: pointer;
+    box-shadow: 0px 3px 6px 2px #808080;
+  }
+
+  &:hover:disabled {
+    cursor: no-drop;
+  }
+  &:active:enabled {
+    filter: brightness(0.9);
+    transition: 0.3s;
+  }
+
+
+  &--success {
+    background-color: var(--success);
+    color: var(--light);
+  }
+
+
+  &--danger {
+    background-color: var(--danger);
+    color: var(--light);
+  }
+
+  &--dark {
+    background-color: var(--dark);
+    color: var(--light);
+  }
+  &--official {
+    background-color: var(--official);
+    color: var(--light);
+  }
+
+  &--gray {
+    background-color: var(--gray);
+    color: var(--dark);
+  }
+
+  &--small {
+    width: 5.6rem;
+  }
+
+  &--normal {
+    width: 16rem;
+  }
+
+  &--large {
+    width: 21rem;
+    height: 6.4rem !important;
+  }
+
+  &--free {
+    width: 100%;
+  }
+}

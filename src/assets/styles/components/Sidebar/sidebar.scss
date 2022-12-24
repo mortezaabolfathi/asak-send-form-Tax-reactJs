@@ -1,0 +1,13 @@
+.sidebar {
+    background-color: var(--dark);
+    height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    // right: -30rem;
+}
