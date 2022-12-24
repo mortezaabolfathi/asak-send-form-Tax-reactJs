@@ -14,9 +14,9 @@ export const SideBar = () => {
     }
 
     return ( 
-        <div>
-            <Button text={"ارسال صورت حساب"} Click = {()=> RoutePageHandler("uploadExcel")}/>
-            <Button text={"تنظیم مالیاتی"} Click = {()=> RoutePageHandler("TaxSetting")}/>
+        <div className="sidebar">
+            <Button text={"ارسال صورت حساب"} size={"large"} Click = {()=> RoutePageHandler("uploadExcel")}/>
+            <Button text={"تنظیم مالیاتی"}  size={"large"}  Click = {()=> RoutePageHandler("TaxSetting")}/>
         </div>
      );
 }
