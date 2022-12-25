@@ -10,12 +10,12 @@ export const managementMenu = createSlice({
 
   reducers: {
     handlerMenu: (state, action) => {
-      console.log("state is :", state.menuIs)
+      state.activeMenu=!state.activeMenu;
     }
   },
 })
 
 
-export const { handlerMenu } = managementMenu.actions
+export const { handlerMenu } = managementMenu.actions;
 
 export default managementMenu.reducer

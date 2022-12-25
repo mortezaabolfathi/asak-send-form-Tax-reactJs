@@ -9,5 +9,10 @@
     justify-content: center;
     position: fixed;
     top: 0px;
-    // right: -30rem;
+    right: -30rem;
+    transition: all 1s ease;
+    
+    &.active{
+        right: 0px;
+    }
 }
