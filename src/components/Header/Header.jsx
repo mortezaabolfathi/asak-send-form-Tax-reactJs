@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import {handlerMenu} from "./../../appRedux/features/menu/managementMenu";
-
+import img from "./../../assets/image/icons8-menu100.png";
 export const Header = () => {
 
     const dispatch = useDispatch();
@@ -8,16 +8,14 @@ export const Header = () => {
     console.log("before onCLick", activeMenu)
 
     const menuOpen = () =>{
-        dispatch(handlerMenu())
-        // console.log("click here");
+        dispatch(handlerMenu());
         console.log("after Click ", activeMenu);
-        // console.log(handlerMenu())
     }
 
     return ( 
         <div className="header">
-            <p > open menu</p>
-            <p onClick={()=> menuOpen()}>نام و نشان شرکت</p>
+            <img  src={img} alt="" onClick={()=> menuOpen()} />
+            <p>نام و نشان شرکت</p>
         </div>
      );
 }
