@@ -1,7 +1,8 @@
 export const Header = () => {
     return ( 
-        <div>
-            Header
+        <div className="header">
+            <p> open menu</p>
+            <p>نام و نشان شرکت</p>
         </div>
      );
 }
