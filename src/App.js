@@ -14,7 +14,6 @@ function App() {
 
     setTimeout(() => {
       setWelcome(!welcome);
-
     }, 3000);
 
     console.log(welcome);
@@ -22,8 +21,11 @@ function App() {
 
   return (
     <Routes>
-      {welcome ===true ? <Route path="/" element={<WelcomePage />} /> :
-      <Route path="/" element={<LoginPage />} />}
+      {welcome === true ? (
+        <Route path="/" element={<WelcomePage />} />
+      ) : (
+        <Route path="/" element={<LoginPage />} />
+      )}
       <Route path="/dashboard" element={<Layout />}>
         <Route path="uploadExcel" element={<UploadExcel />} />
         <Route path="taxSetting" element={<TaxSetting />} />
