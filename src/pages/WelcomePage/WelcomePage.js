@@ -1,17 +1,13 @@
-import {Button} from "./../../components";
+import {Button} from "../../components";
 import {useNavigate} from "react-router-dom";
-
+import Dian from "../../assets/image/DIAN.png";
 const WelcomePage = () => {
-    const navigate=useNavigate();
-
-    const RoutePageHandler = ( ) => {
-        console.log("thi is click here with change page ")
-        navigate("/Login")
-    }
+    
 
     return ( 
-        <div>
-            <Button text={"کلید کنید"} Click={()=>RoutePageHandler()}/>
+        <div className="welcome">
+            <img src={Dian} className="welcome__img"/>
+            <p>شرکت دیان همراه فردا</p>
         </div>
      );
 }
