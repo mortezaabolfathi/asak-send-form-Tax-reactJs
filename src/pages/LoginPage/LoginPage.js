@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 const LoginPage = () => {
   const navigate = useNavigate();
   const RoutePageHandler = () => {
-    console.log("clicked");
+    // console.log("clicked");
     navigate("/dashboard");
   };
 
   return (
     <div className="loginPage">
       <div className="loginPage__container">
-        <h2>لطفا نام کاربری و رمز عبور خودرا وارد کنید</h2>
+        <h3>لطفا نام کاربری و رمز عبور خودرا وارد کنید</h3>
         <div  className="loginPage__container__inputs" >
           <div className="loginPage__container__inputs__user">
             <label>نام کاربری :</label>
