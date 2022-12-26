@@ -22,7 +22,12 @@ body {
 }
 
 
-
+.Toastify__toast-body {
+  font-size: 2rem;
+  font-family: 'Lalezar';
+  font-weight: bolder;
+  text-align: center;
+}
 
 #root {
   height: 100%;

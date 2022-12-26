@@ -6,6 +6,7 @@ import UploadExcel from "./pages/UploadExcel/UploadExcel";
 import TaxSetting from "./pages/TaxSetting/TaxSetting";
 import TableExcel from "./pages/TableExcel/TableExcel";
 import { useEffect, useState } from "react";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [welcome, setWelcome] = useState(true);
@@ -20,6 +21,7 @@ function App() {
   }, []);
 
   return (
+      <>
     <Routes>
       {welcome === true ? (
         <Route path="/" element={<WelcomePage />} />
@@ -32,6 +34,8 @@ function App() {
       </Route>
       <Route path="tableExcel" element={<TableExcel />} />
     </Routes>
+        <ToastContainer />
+      </>
   );
 }
 
