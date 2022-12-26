@@ -1,6 +1,9 @@
 import { Button } from "../../components";
 import { useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
+import img from "./../../assets/image/icons8-downloading-updates-100.png";
+
+
 const UploadExcel = () => {
 
     const navigate = useNavigate()
@@ -9,28 +12,16 @@ const UploadExcel = () => {
         navigate("/tableExcel")
     }
 
-    const [files, setFiles] = useState(null);
-
-    const inputRef = useRef();
-    const handleDragOver = (event) => {
-        event.preventDefault();
-    };
-
-    const handleDrop = (event) => {
-        event.preventDefault();
-        setFiles(event.dataTransfer.files)
-    };
-
-
     return (
         <div className="uploadExcel">
             <div className="uploadExcel_text">
                 <h3>لطفا فایل اکسل خود را بارگذاری کنید</h3>
             </div>
             <div className="uploadExcel_upload_box">
-                <h3>اینجا فایل اکسل بارگذاری شود</h3>
+                <h3> فایل اکسل در اینجا بارگذاری شود</h3>
+                <img src={img} />
             </div>
-            <Button text={"تایید"} size={"normal"} Click={() => RoutePageHandler()} />
+            <Button text={"تایید"} size={"normal"} type={"official" }Click={() => RoutePageHandler()} />
         </div>
     );
 }

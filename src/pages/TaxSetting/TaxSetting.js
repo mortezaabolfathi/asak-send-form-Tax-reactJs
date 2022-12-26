@@ -14,7 +14,7 @@ const TaxSetting = () => {
             </div>
             <div className="taxSetting_content">
                 <div className="taxSetting_content_input">
-                    <label>شماره حافظه مالیاتی</label>
+                    <label>شماره حافظه مالیاتی :</label>
                     <Input />
                 </div>
                 <Button text={"تایید"} size={"normal"} type={"official"}/>

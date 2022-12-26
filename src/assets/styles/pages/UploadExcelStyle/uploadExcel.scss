@@ -1,5 +1,5 @@
 .uploadExcel {
-    background-color: gray;
+    background: var(--gray);
     width: 50%;
     height: 30%;
     display: flex;
@@ -7,12 +7,23 @@
     justify-content: space-around;
     align-items: center;
     border-radius: 20px;
-    box-shadow: 1px 1px 8px 2px #959393;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    padding: 2rem;
     
     &_upload_box {
-    border: 1px solid var(--warning);
-    padding: 1rem 4rem;
-    border-radius: 20px;
+        border: 1px solid var(--official);
+        padding: 1rem 4rem;
+        border-radius: 20px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5rem;
+        gap: 3rem;
+
+        img{
+            width:3.4rem ;
+        }
     }
 
     &_text h3 {
@@ -20,7 +31,7 @@
     }
     
     &_upload_box h3{
-        font-size: 4rem;
+        font-size: 2.2rem;
 
     }
 }
