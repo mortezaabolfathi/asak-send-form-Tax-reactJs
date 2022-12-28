@@ -7,3 +7,5 @@ export const Button = ({ text, type, Click, size }) => {
   );
 };
 
+// size=["small","normal","large","free"]
+// type=["success","danger","dark","official","gray"]
