@@ -1,7 +1,7 @@
 
-export const Button = ({ text, type, Click, size }) => {
+export const Button = ({ text, type, Click, size , disabled}) => {
   return (
-    <button className={`btn btn--${type} btn--${size}`} onClick={() => Click()}>
+    <button className={`btn btn--${type} btn--${size}`} onClick={() => Click()} disabled={disabled} >
       {text}
     </button>
   );
