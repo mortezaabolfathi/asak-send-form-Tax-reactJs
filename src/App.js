@@ -6,36 +6,32 @@ import UploadExcel from "./pages/UploadExcel/UploadExcel";
 import TaxSetting from "./pages/TaxSetting/TaxSetting";
 import TableExcel from "./pages/TableExcel/TableExcel";
 import { useEffect, useState } from "react";
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [welcome, setWelcome] = useState(true);
   useEffect(() => {
-    console.log(welcome);
-
     setTimeout(() => {
       setWelcome(!welcome);
     }, 3000);
-
-    console.log(welcome);
   }, []);
 
   return (
-      <>
-    <Routes>
-      {welcome === true ? (
-        <Route path="/" element={<WelcomePage />} />
-      ) : (
-        <Route path="/" element={<LoginPage />} />
-      )}
-      <Route path="/dashboard" element={<Layout />}>
-        <Route path="uploadExcel" element={<UploadExcel />} />
-        <Route path="taxSetting" element={<TaxSetting />} />
-      </Route>
-      <Route path="tableExcel" element={<TableExcel />} />
-    </Routes>
-        <ToastContainer />
-      </>
+    <>
+      <Routes>
+        {welcome === true ? (
+          <Route path="/" element={<WelcomePage />} />
+        ) : (
+          <Route path="/" element={<LoginPage />} />
+        )}
+        <Route path="/dashboard" element={<Layout />}>
+          <Route path="uploadExcel" element={<UploadExcel />} />
+          <Route path="taxSetting" element={<TaxSetting />} />
+        </Route>
+        <Route path="tableExcel" element={<TableExcel />} />
+      </Routes>
+      <ToastContainer />
+    </>
   );
 }
 
