@@ -1,7 +1,7 @@
-import { LOGIN, REFRESH_TOKEN_URL } from 'configs/url.config';
-import { ACCESS_TOKEN, IS_LOGGED_IN, REFRESH_TOKEN } from 'configs/variables.config';
-import http from 'services/http.service';
-import { parseJwt } from 'utils/functions.util';
+import { LOGIN, REFRESH_TOKEN_URL } from '../configs/url.config';
+import { ACCESS_TOKEN, IS_LOGGED_IN, REFRESH_TOKEN } from '../configs/variables.config';
+import http from '../services/http.service';
+import { parseJwt } from '../utils/functions.util';
 
 export async function Login(data) {
     try {
