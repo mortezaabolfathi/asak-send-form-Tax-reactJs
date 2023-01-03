@@ -1,24 +1,25 @@
-import { Routes, Route } from "react-router-dom";
-import WelcomePage from "./pages/WelcomePage/WelcomePage";
-import LoginPage from "./pages/LoginPage/LoginPage";
-import Layout from "./layout/Layout";
-import UploadExcel from "./pages/UploadExcel/UploadExcel";
-import TaxSetting from "./pages/TaxSetting/TaxSetting";
-import TableExcel from "./pages/TableExcel/TableExcel";
-import { useEffect, useState } from "react";
+// import { Routes, Route } from "react-router-dom";
+// import WelcomePage from "./pages/WelcomePage/WelcomePage";
+// import LoginPage from "./pages/LoginPage/LoginPage";
+// import Layout from "./layout/Layout";
+// import UploadExcel from "./pages/UploadExcel/UploadExcel";
+// import TaxSetting from "./pages/TaxSetting/TaxSetting";
+// import TableExcel from "./pages/TableExcel/TableExcel";
+// import { useEffect, useState } from "react";
+import { AppRouting } from "./routes/index.routes"
 import { ToastContainer } from "react-toastify";
 
 function App() {
-  const [welcome, setWelcome] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setWelcome(!welcome);
-    }, 3000);
-  }, []);
+  // const [welcome, setWelcome] = useState(true);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setWelcome(!welcome);
+  //   }, 3000);
+  // }, []);
 
   return (
     <>
-      <Routes>
+      {/* <Routes>
         {welcome === true ? (
           <Route path="/" element={<WelcomePage />} />
         ) : (
@@ -29,7 +30,8 @@ function App() {
           <Route path="taxSetting" element={<TaxSetting />} />
         </Route>
         <Route path="tableExcel" element={<TableExcel />} />
-      </Routes>
+      </Routes> */}
+      <AppRouting/>
       <ToastContainer position="bottom-right" />
     </>
   );
