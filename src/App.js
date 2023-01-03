@@ -30,7 +30,7 @@ function App() {
         </Route>
         <Route path="tableExcel" element={<TableExcel />} />
       </Routes>
-      <ToastContainer />
+      <ToastContainer position="bottom-right" />
     </>
   );
 }
