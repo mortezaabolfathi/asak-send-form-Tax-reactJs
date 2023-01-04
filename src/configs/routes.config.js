@@ -1,6 +1,6 @@
 export const PATHS = {
   HOME: "/",
-  LOGIN: "/",
+  LOGIN: "/login",
   DASHBOARD: "/dashboard",
   UPLOAD_EXCEL: "/uploadExcel",
   TAX_SETTING: "/taxSetting",

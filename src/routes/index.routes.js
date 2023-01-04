@@ -4,7 +4,7 @@ import { PATHS } from "../configs/routes.config";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ProtectedRtoutes } from "./protected.routes";
 import { PublicRtoutes } from "./public.routes";
-import { LayOut } from "../layOut/LayOut";
+import { Layout } from "../layout/Layout";
 import {
   WelcomePage,
   LoginPage,
@@ -23,30 +23,27 @@ export function AppRouting() {
     }, 3000);
   }, []);
 
-  
   return (
     <BrowserRouter>
-      {/* <Routes> */}
-      {/* <Route path={PATHS.HOME} element={<WelcomePage />} /> */}
-        {/* <PublicRtoutes /> */}
-        {/* {welcome === true ? (
-          <Route path={PATHS.HOME} element={<WelcomePage />} />
-        ) : (
-          <Route path={PATHS.LOGIN} element={<LoginPage />} />
-        )} */}
+      <Routes>
+        <Route element={<PublicRtoutes />}>
+          {welcome === true ? (
+            <Route path={PATHS.HOME} element={<WelcomePage />} />
+          ) : (
+            <Route path={PATHS.HOME} element={<LoginPage />} />
+          )}
 
-        {/* <ProtectedRtoutes>
-          <Route path={PATHS.DASHBOARD} element={<LayOut />}>
-            <Route path={PATHS.UPLOAD_EXCEL} element={<UploadExcel />} />
-            <Route path={PATHS.TAX_SETTING} element={<TaxSetting />} />
+          <Route path={PATHS.LOGIN} element={<LoginPage />} />
+        </Route>
+        <Route element={<ProtectedRtoutes />}>
+          <Route path="/dashboard" element={<Layout />}>
+            <Route path="uploadExcel" element={<UploadExcel />} />
+            <Route path="taxSetting" element={<TaxSetting />} />
           </Route>
-          <Route path={PATHS.TABLE_EXCEL} element={<TableExcel />} />
-          <Route
-            path={PATHS.COMPLeTE_REPORT_EXCEL}
-            element={<CompleteReportExcel />}
-          />
-        </ProtectedRtoutes> */}
-      {/* </Routes> */}
+          <Route path="tableExcel" element={<TableExcel />} />
+          <Route path="tableExcel" element={<CompleteReportExcel />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }
