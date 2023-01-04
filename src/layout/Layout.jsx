@@ -1,8 +1,7 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "./../components";
-import { SideBar } from "./../components";
+import { Header, SideBar } from "../components";
 
-const Layout = () => {
+export const Layout = () => {
     return ( 
         <div className="layout">
             <div className="layout__header">
@@ -20,4 +19,3 @@ const Layout = () => {
      );
 }
  
-export default Layout;

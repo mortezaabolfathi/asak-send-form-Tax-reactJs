@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import {
   ACCESS_TOKEN,
   IS_LOGGED_IN,
   REFRESH_TOKEN,
 } from "../configs/variables.config";
+
 // import Navigate from 'universal-navigate';
 
 export const getUserloggedInData = () => {
@@ -26,9 +28,14 @@ export const parseJwt = (token) => {
   );
   return JSON.parse(jsonPayload);
 };
+const LoginNavigate = ()=>{
+  const navigate = useNavigate();
+      navigate("/login")
 
+}
 export const CheckUserExpired = (pageStatus) => {
   const token = localStorage.getItem(ACCESS_TOKEN);
+
   if (!token) return;
   const { exp } = parseJwt(token);
   if (exp * 1000 < Date.now()) {
@@ -37,12 +44,9 @@ export const CheckUserExpired = (pageStatus) => {
     localStorage.removeItem(REFRESH_TOKEN);
     localStorage.removeItem(IS_LOGGED_IN);
 
-    // if(pageStatus != "public") {
-    //     Navigate.push({
-    //         url: '/login?expired=true',
-    //         animated: true
-    //     });
-    // }
+    if (pageStatus != "public") {
+      LoginNavigate()
+    }
   }
 };
 

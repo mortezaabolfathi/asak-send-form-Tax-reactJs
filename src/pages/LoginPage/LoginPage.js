@@ -6,7 +6,7 @@ import { Login } from "../../api/userLogin.api";
 const LoginPage = () => {
   const navigate = useNavigate();
   const successLogin = () => toast.success("ورود با موفقیت انجام شد");
-  const failedLogin = () => toast.error("ورود ناموفق");
+  const failedLogin = () => toast.error("ورود ناموفق، دوباره سعی کنید");
   const RoutePageHandler = () => {
     navigate("/dashboard");
     successLogin();
