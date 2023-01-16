@@ -1,11 +1,31 @@
-import { Button } from "../../components";
+import { useEffect, useState } from "react";
+import { Button, Loading } from "../../components";
 import { Input } from "../../components";
 import { Modal } from "../../components";
+import { useDispatch } from "react-redux";
+import { handlerModal } from "../../appRedux/features/menu/managementMenu";
 
 const TableExcel = () => {
+  const[loading,setLoading]=useState(true)
+  
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(!loading);
+    }, 3000);
+  }, []);
+
+const dispatch = useDispatch()
+
+const modalHandler = ()=>{
+  dispatch(handlerModal())
+  console.log("yes");
+}
+
   return (
     <>
-      <Modal/>
+    <Loading active={loading}/>
+      <Modal />
       <div className="tableEx_page">
         <div className="tableEx_page_container">
           <table>
@@ -582,7 +602,7 @@ const TableExcel = () => {
           </div>
           <div className="tableEx_page_btn--left">
             <Button text={"دانلود صورت حساب"} size={"large"} type={"light"} />
-            <Button text={"تایید"} size={"normal"} type={"light"} />
+            <Button text={"تایید"} size={"normal"} type={"light"} Click={()=>modalHandler()}/>
           </div>
         </div>
       </div>
