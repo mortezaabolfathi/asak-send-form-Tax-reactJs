@@ -21,7 +21,7 @@ export const ProtectedRtoutes = () => {
     },[location]);
 
     const isAuth = useAuth();
-    if(isAuth == true || isAuth == "true") {
+    if(isAuth === true || isAuth === "true") {
         return <Outlet/>;
     } else {
         removeAllUserData();

@@ -1,4 +1,6 @@
-export const Loading = ({ active }) => {
+
+export const Loading = ({active}) => {
+
   return (
     <div className={active === true ? "loadingActive" : "loadingDeactive"} >
       <div className="lds-facebook" >

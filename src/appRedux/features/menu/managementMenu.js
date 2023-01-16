@@ -15,6 +15,7 @@ export const managementMenu = createSlice({
     handlerModal: (state) => {
       state.activeModal = !state.activeModal;
     },
+    
   },
 });
 

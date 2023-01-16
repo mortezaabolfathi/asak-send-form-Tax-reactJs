@@ -6,8 +6,7 @@ import { useDispatch } from "react-redux";
 import { handlerModal } from "../../appRedux/features/menu/managementMenu";
 
 const TableExcel = () => {
-  const[loading,setLoading]=useState(true)
-  
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,16 +14,16 @@ const TableExcel = () => {
     }, 3000);
   }, []);
 
-const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-const modalHandler = ()=>{
-  dispatch(handlerModal())
-  console.log("yes");
-}
+  const modalHandler = () => {
+    dispatch(handlerModal());
+    console.log("yes");
+  };
 
   return (
     <>
-    <Loading active={loading}/>
+      <Loading active={loading} />
       <Modal />
       <div className="tableEx_page">
         <div className="tableEx_page_container">
@@ -602,7 +601,12 @@ const modalHandler = ()=>{
           </div>
           <div className="tableEx_page_btn--left">
             <Button text={"دانلود صورت حساب"} size={"large"} type={"light"} />
-            <Button text={"تایید"} size={"normal"} type={"light"} Click={()=>modalHandler()}/>
+            <Button
+              text={"تایید"}
+              size={"normal"}
+              type={"light"}
+              Click={() => modalHandler()}
+            />
           </div>
         </div>
       </div>

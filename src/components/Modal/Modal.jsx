@@ -3,15 +3,13 @@ import { useSelector,useDispatch } from "react-redux";
 import { handlerModal } from "../../appRedux/features/menu/managementMenu";
 
 export const Modal = () => {
-  const modalState = useSelector((state) => state.menu.activeModal);
+  const modal = useSelector((state) => state.menu.activeModal);
   const dispatch = useDispatch();
   const ncHandler = () => {
     dispatch(handlerModal());
-    console.log(modalState);
   };
-  console.log(modalState);
   return (
-    <div className={`${modalState ? "modalActive" : "modalDeactive"}`}>
+    <div className={`${modal ? "modalActive" : "modalDeactive"}`}>
       <div className="modalActive__container">
         <div className="modalActive__container__text">
           <p>آیا از فاکتور وارد شده مطمئن هستید ؟</p>

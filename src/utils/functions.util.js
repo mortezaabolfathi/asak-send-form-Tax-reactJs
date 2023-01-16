@@ -44,7 +44,7 @@ export const CheckUserExpired = (pageStatus) => {
     localStorage.removeItem(REFRESH_TOKEN);
     localStorage.removeItem(IS_LOGGED_IN);
 
-    if (pageStatus != "public") {
+    if (pageStatus !== "public") {
       LoginNavigate()
     }
   }
