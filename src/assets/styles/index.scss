@@ -1,15 +1,24 @@
 // basic styles
-@import "./var.scss";
-@import "./reset.scss";
-@import "./public.scss";
-@import "./App.scss";
+@import "./var";
+@import "./reset";
+@import "./public";
 
 // style components
-@import "./components/Button/Button.scss";
-@import "./components/Input/Input.scss";
-// @import "./components/Loading/Facebook.scss";
-@import "./components/Sidebar/sidebar.scss";
-
+@import "./components/Button/Button";
+@import "./components/Input/Input";
+@import "./components/Loading/Facebook";
+@import "./components/Sidebar/sidebar";
+@import "./components/Header/header";
+@import "react-toastify/dist/ReactToastif";
+@import "./components/Modal/Modal";
 
 //style LayOut
 @import "./Layout/Layout.scss";
+
+
+//stylePages
+@import "./pages/UploadExcelStyle/uploadExcel";
+@import "./pages/WelcomePage/WelcomePage";
+@import "./pages/TaxSetting/taxsetting";
+@import "./pages/LoginPage/LoginPage";
+@import "./pages/TableExvelSyle/tableExcl";

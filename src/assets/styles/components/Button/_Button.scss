@@ -15,7 +15,13 @@
   }
 
   &:hover:disabled {
-    cursor: no-drop;
+    box-shadow: none;
+    opacity: 0.2;
+
+  }
+  &:disabled{
+    box-shadow: none;
+    opacity: 0.2;
   }
   &:active:enabled {
     filter: brightness(0.9);
