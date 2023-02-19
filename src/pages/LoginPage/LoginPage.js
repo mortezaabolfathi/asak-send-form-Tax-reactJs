@@ -69,7 +69,7 @@ const LoginPage = () => {
               />
             </div>
           </form>
-          <Button text="وارد شوید" type="official" size="normal" form="login" />
+          <Button text="وارد شوید" type="official" size="normal" form="login" Click={()=>handleSubmit}/>
         </div>
       </div>
     </>
