@@ -3,7 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { CheckUserExpired } from "../utils/functions.util";
 
 
-export const PublicRtoutes = () => {
+export const PublicRoutes = () => {
 
   const location = useLocation();
   useEffect(() => {

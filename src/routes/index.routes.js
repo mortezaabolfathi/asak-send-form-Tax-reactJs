@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { PATHS } from "../configs/routes.config";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ProtectedRtoutes } from "./protected.routes";
-import { PublicRtoutes } from "./public.routes";
+import { ProtectedRoutes } from "./protected.routes";
+import { PublicRoutes } from "./public.routes";
 import { Layout } from "../layout/Layout";
 import {
   WelcomePage,
@@ -26,7 +26,7 @@ export function AppRouting() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<PublicRtoutes />}>
+        <Route element={<PublicRoutes />}>
           {welcome === true ? (
             <Route path={PATHS.HOME} element={<WelcomePage />} />
           ) : (
@@ -35,7 +35,7 @@ export function AppRouting() {
 
           <Route path={PATHS.LOGIN} element={<LoginPage />} />
         </Route>
-        <Route element={<ProtectedRtoutes />}>
+        <Route element={<ProtectedRoutes />}>
           <Route path="/dashboard" element={<Layout />}>
             <Route path="uploadExcel" element={<UploadExcel />} />
             <Route path="taxSetting" element={<TaxSetting />} />

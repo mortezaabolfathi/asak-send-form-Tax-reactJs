@@ -13,7 +13,7 @@ const useAuth = () =>
     }
 }
 
-export const ProtectedRtoutes = () => {
+export const ProtectedRoutes = () => {
 
     const location = useLocation();
     useEffect(() => {
