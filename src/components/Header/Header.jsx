@@ -5,11 +5,11 @@ export const Header = () => {
 
     const dispatch = useDispatch();
     const {activeMenu} = useSelector(state => state.menu)
-    console.log("before onCLick", activeMenu)
+    // console.log("before onCLick", activeMenu)
 
     const menuOpen = () =>{
         dispatch(handlerMenu());
-        console.log("after Click ", activeMenu);
+        // console.log("after Click ", activeMenu);
     }
 
     return ( 
