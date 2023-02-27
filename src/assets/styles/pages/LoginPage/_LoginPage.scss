@@ -1,10 +1,8 @@
 .loginPage {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+
+ @include flex-center-center-cl;
   label {
     font-size: 2rem;
     width: 9.5rem;
@@ -17,10 +15,7 @@
     height: 30%;
     border-radius: 2rem;
     background: var(--gray);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+  @include flex-space-center-cl;
     padding: 3rem;
     // box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -34,10 +29,7 @@
       &__pass {
         width: 58rem;
         font-size: 2rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-space-center-row;
       }
     }
   }
